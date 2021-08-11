@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+
+// @import url('https://fast.wistia.com/assets/external/uploader.css');
+
+
+@import 'global';
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'welcome';
+@import 'sidebar';
+@import 'brand';
+@import 'pricing';
+@import 'sidebar1';
+@import 'product';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+@import "./../assets/fonts/fonts.css";
+@import "./../assets/css/bootstrap.min.css";
+@import "./../assets/css/pignose.calendar.min.css";
+@import "./../assets/owl-slider/owl.carousel.min.css";
+@import "./../assets/css/jquery.dm-uploader.min.css";
+@import "./../assets/css/main.css";
+@import "./../assets/css/style.css";

@@ -1,0 +1,123 @@
+header {
+    background: black;
+    padding: 0 !important;
+    .head-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        width: 100%;
+        padding: 30px;
+        border-bottom: 1px solid #555555;
+        .menu-btn {
+            padding-left: 30px;
+            width: 30px;
+            height: 19px;
+            position: relative;
+            .close-btn {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: -4px;
+                left: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                img {
+                    padding: 7px 7px 7px 8px;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                }
+            }
+            .menu-open {
+                position: absolute;
+                cursor: pointer;
+            }
+
+            .brand-logo {
+                svg {
+                    width: 100%;
+                }
+            }
+
+            .mob-nav {
+                display: none;
+            }
+        }
+        .right-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr max-content;
+            align-items: center;
+            grid-gap: 40px;
+            img {
+                cursor: pointer;
+            }
+        }
+        .mob-nav {
+            display: none;
+        }
+        .right-mob-options {
+            display: flex;
+            align-items: center;
+            .signout-btn {
+                border-radius: 5px;
+                border: 1px solid white;
+                padding: 8px 12px;
+                background: transparent;
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-right: 20px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header-new {
+        .head-content {
+            .menu-btn {
+                display: none;
+            }
+            .brand-logo {
+                svg {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header-new {
+        .head-content {
+            padding: 15px;
+            .brand-logo {
+                svg {
+                    width: 170px;
+                }
+            }
+            .right-options {
+                display: none;
+            }
+            .mob-nav {
+                display: block;
+                width: 19px;
+                height: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .header-new {
+        .head-content {
+            .brand-logo {
+                svg {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}

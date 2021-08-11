@@ -1,0 +1,192 @@
+.container1 {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 10px;
+}
+
+.highlight-date {
+    background: red;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.block {
+    display: block;
+}
+
+//toggle btn css
+@mixin toggler(
+    $transition: 0.2s ease-out,
+    $color-bg: #555555,
+    $color-on: #ffa472
+) {
+    background: $color-bg;
+    border-radius: 27px * 2;
+    width: 70px;
+    transition: $transition;
+
+    &__label input:checked ~ .toggler {
+        background: $color-on;
+    }
+
+    &::before {
+        border-radius: 27px;
+        width: 27px;
+        height: 27px;
+        transition: $transition;
+    }
+}
+
+
+
+.toggler {
+    padding: 5px;
+    position: relative;
+
+    @keyframes moveCircle1 {
+        50% {
+            padding: 0 12%;
+        }
+    }
+
+    @keyframes moveCircle2 {
+        50% {
+            padding: 0 12%;
+        }
+    }
+
+    &__label {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            margin-right: 1em;
+        }
+
+        input {
+            &:checked {
+                ~ .toggler {
+                    &::before {
+                        transform: translateX(-100%);
+                        left: 100%;
+                        animation: moveCircle2 0.2s ease 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        background: white;
+        position: relative;
+        left: 0;
+        animation: moveCircle1 0.2s ease 1;
+    }
+}
+
+// extend "toggler" with specific settings
+.toggler {
+    @include toggler(
+        0.2s cubic-bezier(0.7, 0.15, 0.36, 1),
+        #555555,
+        #ffa472
+    );
+}
+
+
+@media (max-width: 680px) {
+    .toggler{
+        padding: 3px;
+        width: 44px;
+        &::before{
+            width: 16px;
+            height: 17px;
+        }
+    }
+}
+
+#_hj_feedback_container {
+    ._hj-1O2Rr__MinimizedWidgetMiddle__container {
+        display: none !important;
+        ._hj-21t0-__MinimizedWidgetMiddle__label {
+            display: none !important;
+        }
+    }
+
+    ._hj-1QnQT__MinimizedWidgetMiddle__right {
+        display: none !important;
+    }
+}
+
+.chaport-launcher {
+    .chaport-launcher-button {
+        display: none !important;
+    }
+}
+
+#wistia_chrome_24 {
+    #wistia_grid_34_wrapper {
+        img.w-css-reset {
+            border: none !important;
+            height: 100% !important;
+        }
+    }
+}
+
+
+
+.video-wrapper1, .video-wrapper2,.video-wrapper3, .video-wrapper4  {
+    position: relative;
+    video{
+        width: 100%;
+        vertical-align: middle;
+        .has-media-controls-hidden::-webkit-media-controls {
+            display: none;
+        }
+    }
+}
+.video-overlay-play-button1, .video-overlay-play-button2, .video-overlay-play-button3, .video-overlay-play-button4 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0.95;
+    cursor: pointer;
+    background-image: linear-gradient(transparent, #000);
+    transition: opacity 150ms;
+}
+
+.video-overlay-play-button1:hover, .video-overlay-play-button2:hover, .video-overlay-play-button3:hover, .video-overlay-play-button4:hover {
+    opacity: 1;
+}
+
+.video-overlay-play-button1.is-hidden, .video-overlay-play-button2.is-hidden, .video-overlay-play-button3.is-hidden, .video-overlay-play-button4.is-hidden {
+    display: none;
+}
